@@ -1,1 +1,7 @@
+package com.example.flashcard_quiz;
 
+import java.util.List;
+
+public interface CardLoader {
+    List<Flashcard> loadCards();
+}
