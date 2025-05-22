@@ -1,0 +1,16 @@
+package com.example.flashcard_quiz;
+
+import java.util.Arrays;
+import java.util.List;
+
+public class HardcodedLoader implements CardLoader {
+    @Override
+    public List<Flashcard> loadCards() {
+        return Arrays.asList(
+                new Flashcard("Capital of France?", "Paris"),
+                new Flashcard("2 + 2?", "4"),
+                new Flashcard("Java is a ___?", "Programming Language"),
+                new Flashcard("Sun rises in the ___?", "East")
+        );
+    }
+}
