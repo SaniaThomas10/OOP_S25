@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.flashcard_quiz.QuizController"
+      spacing="15" alignment="CENTER" prefWidth="500" prefHeight="400"
+      style="-fx-background-color: #f4f4f4;">
+
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <!-- Header Image -->
+    <ImageView fitHeight="100" preserveRatio="true">
+        <image>
+            <Image url="@header.png"/>
+        </image>
+    </ImageView>
+
+    <!-- Question -->
+    <Label fx:id="questionLabel"
+           wrapText="true"
+           style="-fx-font-size: 18px; -fx-text-fill: #333333; -fx-font-weight: bold;" />
+
+    <!-- Buttons -->
+    <HBox spacing="10" alignment="CENTER">
+        <Button fx:id="showAnswerButton" text="Show Answer"
+                onAction="#onShowAnswer"
+                style="-fx-background-color: #3498db; -fx-text-fill: white;"/>
+        <Button fx:id="nextButton" text="Next"
+                onAction="#onNext"
+                style="-fx-background-color: #2ecc71; -fx-text-fill: white;"/>
+    </HBox>
+
+    <!-- Answer Field -->
+    <TextField fx:id="answerField"
+               promptText="Your answer..."
+               style="-fx-font-size: 14px; -fx-background-color: white; -fx-border-color: #ccc; -fx-border-radius: 4; -fx-padding: 6;" />
+
+    <!-- Feedback -->
+    <Label fx:id="feedbackLabel"
+           style="-fx-text-fill: #e74c3c; -fx-font-size: 14px;" />
+</VBox>
