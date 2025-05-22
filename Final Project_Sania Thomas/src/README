@@ -1,24 +1,24 @@
-# Flashcard Quiz App
+#Flashcard Quiz App
 
 A simple JavaFX-based flashcard quiz application to help you review and memorize key facts. This app shows a question, lets you input or view the answer, and cycle through the flashcards.
 
 ![Header](src/main/resources/com/example/flashcard_quiz/header.png)
 
-## 🧠 Features
+##🧠 Features
 
 - Displays questions from a deck of flashcards
 - Allows manual answer input or reveal
 - "Next" button cycles through the cards
 - Basic styling and header image for better user experience
 
-## 🚀 Getting Started
+##🚀 Getting Started
 
-### Prerequisites
+###Prerequisites
 
 - Java 22+
 - JavaFX SDK 22+
 - IntelliJ IDEA or another Java IDE
 - Maven (if using dependency management)
 
-### Folder Structure
+###Folder Structure
 
