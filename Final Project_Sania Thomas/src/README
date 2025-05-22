@@ -1,4 +1,4 @@
-#Flashcard Quiz App
+# Flashcard Quiz App
 
 A simple JavaFX-based flashcard quiz application to help you review and memorize key facts. This app shows a question, lets you input or view the answer, and cycle through the flashcards.
 
@@ -16,9 +16,48 @@ A simple JavaFX-based flashcard quiz application to help you review and memorize
 ###Prerequisites
 
 - Java 22+
-- JavaFX SDK 22+
+- JavaFX SDK 22+ (I used 22.0.2)
 - IntelliJ IDEA or another Java IDE
 - Maven (if using dependency management)
 
-###Folder Structure
+### Folder Structure
 
+Flashcard_Quiz/
+├── src/
+│ └── main/
+│ ├── java/
+│ │ └── com/example/flashcard_quiz/
+│ │ ├── FlashcardApp.java
+│ │ ├── Flashcard.java
+│ │ ├── Deck.java
+│ │ ├── QuizController.java
+│ │ ├── CardLoader.java
+│ │ └── HardcodedLoader.java
+│ └── resources/
+│ └── com/example/flashcard_quiz/
+│ ├── quiz.fxml
+│ └── header.png
+
+
+### Running the App
+
+1. **Add JavaFX to your VM options** (if using IntelliJ):
+--module-path "path/to/javafx-sdk-22/lib" --add-modules javafx.controls,javafx.fxml
+
+
+2. **Run `FlashcardApp.java`**
+Make sure the `quiz.fxml` and `header.png` are properly placed in the `resources` directory.
+
+
+## 🎨 Styling
+The `quiz.fxml` file uses inline styles to color buttons and labels. You can enhance this further using an external `.css` stylesheet if desired.
+
+
+## 🧩 Customization
+To customize your flashcards, modify the `HardcodedLoader.java` class. For example:
+
+```java
+return Arrays.asList(
+    new Flashcard("Capital of France?", "Paris"),
+    new Flashcard("2 + 2?", "4")
+);
