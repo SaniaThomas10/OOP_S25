@@ -1,0 +1,20 @@
+package com.example.flashcard_quiz;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Deck {
+    private final List<Flashcard> cards = new ArrayList<>();
+    private int index = 0;
+
+    public void addCard(Flashcard card) {
+        cards.add(card);
+    }
+
+    public Flashcard getNextCard() {
+        if (cards.isEmpty()) return null;
+        Flashcard card = cards.get(index);
+        index = (index + 1) % cards.size();
+        return card;
+    }
+}
